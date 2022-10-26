@@ -1,0 +1,30 @@
+{
+  "name": "jeopardy-bot",
+  "version": "1.0.0",
+  "main": "src/bot.ts",
+  "repository": "https://github.com/GuthrieW/jeopardy-bot",
+  "author": "Wesley Guthrie",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "deploy-commands": "ts-node src/bin/deploy-commands.ts",
+    "start": "ts-node src/bot.ts",
+    "test-database": "ts-node src/bin/test-database.ts",
+    "rebuild": "yarn deploy-commands && yarn start"
+  },
+  "dependencies": {
+    "axios": "^1.1.2",
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3",
+    "serverless-mysql": "^1.5.4",
+    "sql-template-strings": "^2.2.2",
+    "string-similarity": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.4",
+    "@types/uuid": "^8.3.4",
+    "eslint": "^8.25.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}
